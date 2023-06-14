@@ -6,8 +6,7 @@
 
 @section('content')
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-{{--        @include('partials.contend-header', ['name' => 'category', 'key' => 'Add'])--}}
+        @include('partials.contend-header', ['name' => 'category', 'key' => 'Add'])
         <div class="content">
             <section class="content">
                 <div class="container-fluid">
@@ -17,8 +16,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Quick Example</h3>
                                 </div>
-{{--                                <form action="{{route('categories.store')}}" method="post">--}}
-                                <form action="" method="">
+                                <form action="{{route('categories.store')}}" method="post">
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
@@ -33,7 +31,7 @@
                                             <label>Chon danh muc cha</label>
                                             <select class="form-control select2" style="width: 100%;" name="parent_id">
                                                 <option value="0" selected="selected">Chon danh muc cha</option>
-{{--                                                {!! $htmlOptiont !!}--}}
+                                                {!! $htmlOptiont !!}
                                             </select>
                                         </div>
                                     </div>

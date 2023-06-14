@@ -25,27 +25,27 @@ Route::get('/home', function () {
 
 Route::prefix('admin')->group(function () {
     Route::prefix('categories')->group(function () {
-//        Route::get('/', [CategoryController::class, 'index'])
-//            ->name('categories.index')
+        Route::get('/', [CategoryController::class, 'index'])
+            ->name('categories.index');
 //            ->middleware(['auth']);
 //
         Route::get('/create', [CategoryController::class, 'create'])
             ->name('categories.create');
 //
-//        Route::post('/store', [CategoryController::class, 'store'])
-//            ->name('categories.store')
+        Route::post('/store', [CategoryController::class, 'store'])
+            ->name('categories.store');
 //            ->middleware(['auth']);
 //
-//        Route::get('/edit/{id}', [CategoryController::class, 'edit'])
-//            ->name('categories.edit')
+        Route::get('/edit/{id}', [CategoryController::class, 'edit'])
+            ->name('categories.edit');
 //            ->middleware(['auth']);
 //
-//        Route::post('/update/{id}', [CategoryController::class, 'update'])
-//            ->name('categories.update')
+        Route::post('/update/{id}', [CategoryController::class, 'update'])
+            ->name('categories.update');
 //            ->middleware(['auth']);
 //
-//        Route::get('/delete/{id}', [CategoryController::class, 'delete'])
-//            ->name('categories.delete')
+        Route::get('/delete/{id}', [CategoryController::class, 'delete'])
+            ->name('categories.delete');
 //            ->middleware(['auth']);
     });
 //    Route::prefix('menus')->group(function () {
