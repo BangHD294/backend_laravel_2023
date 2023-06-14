@@ -52,7 +52,7 @@ class CategoryController extends Controller
     }
     public function delete($id) {
         $this->category->find($id)->delete();
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('categories.index');
     }
     public function getCategory($parentId) {
         $data = $this->category->all();
