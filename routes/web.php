@@ -48,31 +48,31 @@ Route::prefix('admin')->group(function () {
             ->name('categories.delete');
 //            ->middleware(['auth']);
     });
-//    Route::prefix('menus')->group(function () {
-//        Route::get('/',[MenuController::class, 'index'])
-//            ->name('menus.index')
+    Route::prefix('menus')->group(function () {
+        Route::get('/',[MenuController::class, 'index'])
+            ->name('menus.index');
 //            ->middleware(['auth']);
 //
-//        Route::get('/create', [MenuController::class, 'create'])
-//            ->name('menus.create')
+        Route::get('/create', [MenuController::class, 'create'])
+            ->name('menus.create');
 //            ->middleware(['auth']);
 //
-//        Route::post('/store', [MenuController::class, 'store'])
-//            ->name('menus.store')
+        Route::post('/store', [MenuController::class, 'store'])
+            ->name('menus.store');
 //            ->middleware(['auth']);
 //
-//        Route::get('/edit/{id}',[MenuController::class, 'edit'])
-//            ->name('menus.edit')
+        Route::get('/edit/{id}',[MenuController::class, 'edit'])
+            ->name('menus.edit');
 //            ->middleware(['auth']);
 //
-//        Route::post('/update/{id}',[MenuController::class, 'update'])
-//            ->name('menus.update')
+        Route::post('/update/{id}',[MenuController::class, 'update'])
+            ->name('menus.update');
 //            ->middleware(['auth']);
 //
-//        Route::get('/delete/{id}',[MenuController::class, 'delete'])
-//            ->name('menus.delete')
+        Route::get('/delete/{id}',[MenuController::class, 'delete'])
+            ->name('menus.delete');
 //            ->middleware(['auth']);
-//    });
+    });
 //
 //    Route::prefix('product')->group(function () {
 //        Route::get('/',[AdminProductController::class, 'index'])
