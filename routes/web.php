@@ -72,11 +72,11 @@ Route::prefix('admin')->group(function () {
             ->middleware(['auth']);
     });
 //
-//    Route::prefix('product')->group(function () {
-//        Route::get('/',[AdminProductController::class, 'index'])
-//            ->name('product.index')
-//            ->middleware(['auth']);
-//
+    Route::prefix('product')->group(function () {
+        Route::get('/',[AdminProductController::class, 'index'])
+            ->name('product.index')
+            ->middleware(['auth']);
+
 //        Route::get('/create', [AdminProductController::class, 'create'])
 //            ->name('product.create')
 //            ->middleware(['auth']);
@@ -96,7 +96,7 @@ Route::prefix('admin')->group(function () {
 //        Route::get('/delete/{id}',[AdminProductController::class, 'delete'])
 //            ->name('product.delete')
 //            ->middleware(['auth']);
-//    });
+    });
 
 });
 require __DIR__.'/auth.php';
