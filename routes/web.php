@@ -77,13 +77,13 @@ Route::prefix('admin')->group(function () {
             ->name('product.index')
             ->middleware(['auth']);
 
-//        Route::get('/create', [AdminProductController::class, 'create'])
-//            ->name('product.create')
-//            ->middleware(['auth']);
+        Route::get('/create', [AdminProductController::class, 'create'])
+            ->name('product.create')
+            ->middleware(['auth']);
 //
-//        Route::post('/store', [AdminProductController::class, 'store'])
-//            ->name('product.store')
-//            ->middleware(['auth']);
+        Route::post('/store', [AdminProductController::class, 'store'])
+            ->name('product.store')
+            ->middleware(['auth']);
 //
 //        Route::get('/edit/{id}',[AdminProductController::class, 'edit'])
 //            ->name('product.edit')

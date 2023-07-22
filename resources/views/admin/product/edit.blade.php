@@ -6,7 +6,7 @@
 
 @section('css')
     <link href="{{asset('vendors/select2/select2.min.css')}}" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{asset('admins/product/index/list.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/product/index/list.css')}}">
 @endsection
 
 
@@ -120,7 +120,7 @@
             referrerpolicy="origin"></script>
     {{--<script src="https://cdn.tiny.cloud/1/1dtvvmm1y7snmzyc7octk6rredwfyykamidbve2qd763kpfq/tinymce/6/tinymce.min.js"></script>--}}
     <script src="{{asset('vendors/select2/select2.min.js')}}"></script>
-    <script src="{{asset('admins/product/add/add.js')}}"></script>
+    <script src="{{asset('admin/product/add/add.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.0.0-beta.9/plugins.min.js"></script>
 @endsection
 

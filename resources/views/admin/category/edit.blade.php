@@ -15,7 +15,7 @@
                         <div class="col-md-12">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Quick Example</h3>
+                                    <h3 class="card-title">Edit Category</h3>
                                 </div>
                                 <form action="{{route('categories.update', ['id' =>$category->id])}}" method="post">
                                     @csrf

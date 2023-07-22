@@ -62,3 +62,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Note BangHD0209
+
+## Use upload Image
+https://unisharp.github.io/laravel-filemanager/
+
+B1: composer require unisharp/laravel-filemanager
+B2: php artisan vendor:publish --tag=lfm_config
+B3: php artisan vendor:publish --tag=lfm_public
+B4: php artisan storage:link
+
+
+ fix bug not view image => change url in file .env => APP_URL= http://127.0.0.1:8000
+## Use text editor
+TinyMCE
+
