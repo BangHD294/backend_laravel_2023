@@ -9,13 +9,13 @@ use App\Models\Product;
 use App\Models\ProductImage;
 use App\Models\ProductTag;
 use App\Models\Tag;
-//use App\Traits\StorageImageTrait;
+use App\Traits\StorageImageTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class AdminProductController extends Controller
 {
-//    use StorageImageTrait;
+    use StorageImageTrait;
 
     private $category;
     private $product;
