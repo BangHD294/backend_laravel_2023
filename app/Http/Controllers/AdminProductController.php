@@ -2,6 +2,17 @@
 
 namespace App\Http\Controllers;
 
+//use App\Components\Recusive;
+//use App\Http\Requests\ProductAddRequest;
+//use App\Models\Category;
+//use App\Models\Product;
+//use App\Models\ProductImage;
+//use App\Models\ProductTag;
+//use App\Models\Tag;
+//use App\Traits\StorageImageTrait;
+//use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Log;
+//use Illuminate\Support\Facades\DB;
 use App\Components\Recusive;
 use App\Http\Requests\ProductAddRequest;
 use App\Models\Category;
@@ -10,9 +21,14 @@ use App\Models\ProductImage;
 use App\Models\ProductTag;
 use App\Models\Tag;
 use App\Traits\StorageImageTrait;
+use http\Env\Response;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+use mysql_xdevapi\Exception;
+use phpDocumentor\Reflection\Types\This;
 
 class AdminProductController extends Controller
 {
@@ -71,6 +87,7 @@ class AdminProductController extends Controller
                 $dataProducts['feature_image_path'] = $dataUploadFeatureImage['file_path'];
             }
             $productData =  $this->product->create($dataProducts);
+
             // insert data to product_images
             if ($request->hasFile('image_path')){
                 foreach ($request->image_path as $fileItem){
@@ -165,6 +182,7 @@ class AdminProductController extends Controller
     }
 
     public function delete($id) {
+
         try {
             $this->product->find($id)->delete();
             return response()->json([

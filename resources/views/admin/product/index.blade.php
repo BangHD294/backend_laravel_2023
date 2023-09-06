@@ -5,14 +5,15 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('admin/product/index/list.css')}}">
+    <link rel="stylesheet" href="{{asset('admins/product/index/list.css')}}">
 @endsection
 
 @section('js')
     <script src="{{asset('vendors/sweetalert2/sweetalert2@11.js')}}"></script>
+{{--    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>--}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
 {{--    <script src="{{asset('adminlte/plugins/jquery/jquery.min.js')}}"></script>--}}
-    <script src="{{asset('admin/product/index/list.js')}}"></script>
+    <script src="{{asset('admins/product/index/list.js')}}"></script>
 @endsection
 
 @section('content')
@@ -22,7 +23,6 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                        {{--                        <h3 class="card-title">DataTable with default features</h3>--}}
                         <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> <a
                                 href="{{route('product.create')}}">Add item</a></button>
                     </div>

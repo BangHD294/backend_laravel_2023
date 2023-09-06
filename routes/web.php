@@ -85,17 +85,17 @@ Route::prefix('admin')->group(function () {
             ->name('product.store')
             ->middleware(['auth']);
 //
-//        Route::get('/edit/{id}',[AdminProductController::class, 'edit'])
-//            ->name('product.edit')
-//            ->middleware(['auth']);
+        Route::get('/edit/{id}',[AdminProductController::class, 'edit'])
+            ->name('product.edit')
+            ->middleware(['auth']);
 //
-//        Route::post('/update/{id}',[AdminProductController::class, 'update'])
-//            ->name('product.update')
-//            ->middleware(['auth']);
+        Route::post('/update/{id}',[AdminProductController::class, 'update'])
+            ->name('product.update')
+            ->middleware(['auth']);
 //
-//        Route::get('/delete/{id}',[AdminProductController::class, 'delete'])
-//            ->name('product.delete')
-//            ->middleware(['auth']);
+        Route::get('/delete/{id}',[AdminProductController::class, 'delete'])
+            ->name('product.delete')
+            ->middleware(['auth']);
     });
 
 });

@@ -77,4 +77,6 @@ B4: php artisan storage:link
  fix bug not view image => change url in file .env => APP_URL= http://127.0.0.1:8000
 ## Use text editor
 TinyMCE
+##
+- optional() neu data tra ve non object thi no se tra ve  null
 
