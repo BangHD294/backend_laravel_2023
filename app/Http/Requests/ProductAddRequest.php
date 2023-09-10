@@ -38,7 +38,8 @@ class ProductAddRequest extends FormRequest
             'name.max' => 'Tên không được vượt quá 255 ký tự',
             'name.min' => 'Tên không được it hơn 5 ký tự',
             'category_id.required'=>'Tên danh mục không được để trống',
-            'contents.required'=>'Nội dung không được để trống'
+            'contents.required'=>'Nội dung không được để trống',
+            'price.required'=>'Giá không được để trống'
         ];
     }
 }

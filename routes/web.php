@@ -50,52 +50,61 @@ Route::prefix('admin')->group(function () {
         Route::get('/',[MenuController::class, 'index'])
             ->name('menus.index')
             ->middleware(['auth']);
-//
         Route::get('/create', [MenuController::class, 'create'])
             ->name('menus.create')
             ->middleware(['auth']);
-//
         Route::post('/store', [MenuController::class, 'store'])
             ->name('menus.store')
             ->middleware(['auth']);
-//
         Route::get('/edit/{id}',[MenuController::class, 'edit'])
             ->name('menus.edit')
             ->middleware(['auth']);
-//
         Route::post('/update/{id}',[MenuController::class, 'update'])
             ->name('menus.update')
             ->middleware(['auth']);
-//
         Route::get('/delete/{id}',[MenuController::class, 'delete'])
             ->name('menus.delete')
             ->middleware(['auth']);
     });
-//
     Route::prefix('product')->group(function () {
         Route::get('/',[AdminProductController::class, 'index'])
             ->name('product.index')
             ->middleware(['auth']);
-
         Route::get('/create', [AdminProductController::class, 'create'])
             ->name('product.create')
             ->middleware(['auth']);
-//
         Route::post('/store', [AdminProductController::class, 'store'])
             ->name('product.store')
             ->middleware(['auth']);
-//
         Route::get('/edit/{id}',[AdminProductController::class, 'edit'])
             ->name('product.edit')
             ->middleware(['auth']);
-//
         Route::post('/update/{id}',[AdminProductController::class, 'update'])
             ->name('product.update')
             ->middleware(['auth']);
-//
         Route::get('/delete/{id}',[AdminProductController::class, 'delete'])
             ->name('product.delete')
             ->middleware(['auth']);
+    });
+    Route::prefix('slider')->group(function () {
+        Route::get('/',[AdminSliderController::class, 'index'])
+            ->name('slider.index')
+            ->middleware(['auth']);
+//        Route::get('/create', [AdminSliderController::class, 'create'])
+//            ->name('product.create')
+//            ->middleware(['auth']);
+//        Route::post('/store', [AdminProductController::class, 'store'])
+//            ->name('product.store')
+//            ->middleware(['auth']);
+//        Route::get('/edit/{id}',[AdminProductController::class, 'edit'])
+//            ->name('product.edit')
+//            ->middleware(['auth']);
+//        Route::post('/update/{id}',[AdminProductController::class, 'update'])
+//            ->name('product.update')
+//            ->middleware(['auth']);
+//        Route::get('/delete/{id}',[AdminProductController::class, 'delete'])
+//            ->name('product.delete')
+//            ->middleware(['auth']);
     });
 
 });

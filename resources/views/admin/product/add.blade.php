@@ -33,7 +33,9 @@
                                                    class="form-control "
                                                    id="inputCategory"
                                                    name="name"
-                                                   placeholder="Nhập tên sản phẩm">
+                                                   placeholder="Nhập tên sản phẩm"
+                                                   value="{{old('name')}}"
+                                            >
                                             @error('name')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -44,7 +46,9 @@
                                                    class="form-control"
                                                    id="inputCategory"
                                                    name="price"
-                                                   placeholder="Nhập giá sản phẩm">
+                                                   placeholder="Nhập giá sản phẩm"
+                                                   value="{{old('price')}}"
+                                            >
                                             @error('price')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -87,8 +91,11 @@
                                             <label>Nhập nội dung</label>
                                             <textarea class="form-control tinymce_editor_init @error('contents') is-invalid @enderror"
                                                       name="contents"
-                                                      rows="3"></textarea>
-                                            @error('contents  ')
+                                                      rows="3"
+                                            >
+                                                {{old('contents')}}
+                                            </textarea>
+                                            @error('contents')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
