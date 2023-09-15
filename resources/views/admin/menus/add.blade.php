@@ -22,7 +22,7 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Tên Menu</label>
-                                            <input type=inputCategory"text"
+                                            <input type="text"
                                                    class="form-control"
                                                    id="inputCategory"
                                                    name="name"

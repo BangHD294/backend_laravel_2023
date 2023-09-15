@@ -27,7 +27,7 @@
                                         <h3 class="card-title">Quick Example</h3>
                                     </div>
                                     <div class="card-body">
-                                        <div class="form-group">
+                                        <div class="form-group @error('name') is-invalid @enderror">
                                             <label for="">Tên sản phẩm</label>
                                             <input type="text"
                                                    class="form-control "

@@ -21,7 +21,7 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="">Tên danh mục</label>
-                                            <input type=inputCategory"text"
+                                            <input type="text"
                                                    class="form-control"
                                                    id="inputCategory"
                                                    name="name"
