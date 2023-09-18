@@ -45,10 +45,6 @@
 <script src="{{asset('adminlte/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
 <script src="{{asset('adminlte/plugins/bs-stepper/js/bs-stepper.min.js')}}"></script>
 <script src="{{asset('adminlte/plugins/dropzone/min/dropzone.min.js')}}"></script>
-<script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
-<script src="{{asset('adminlte/dist/js/demo.js')}}"></script>
-<script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
-<script src="{{asset('adminlte/dist/js/demo.js')}}"></script>
 <script>
     $(function () {
         $('.select2').select2()
