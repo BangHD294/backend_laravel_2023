@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminSliderController;
+use App\Http\Controllers\AdminAirdropController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -105,6 +106,27 @@ Route::prefix('admin')->group(function () {
         Route::get('/delete/{id}',[AdminSliderController::class, 'delete'])
             ->name('slider.delete')
             ->middleware(['auth']);
+    });
+
+    Route::prefix('airdrop')->group(function () {
+        Route::get('/',[AdminAirdropController::class, 'index'])
+            ->name('airdrop.index')
+            ->middleware(['auth']);
+//        Route::get('/create', [AdminSliderController::class, 'create'])
+//            ->name('slider.create')
+//            ->middleware(['auth']);
+//        Route::post('/store', [AdminSliderController::class, 'store'])
+//            ->name('slider.store')
+//            ->middleware(['auth']);
+//        Route::get('/edit/{id}',[AdminSliderController::class, 'edit'])
+//            ->name('slider.edit')
+//            ->middleware(['auth']);
+//        Route::post('/update/{id}',[AdminSliderController::class, 'update'])
+//            ->name('slider.update')
+//            ->middleware(['auth']);
+//        Route::get('/delete/{id}',[AdminSliderController::class, 'delete'])
+//            ->name('slider.delete')
+//            ->middleware(['auth']);
     });
 
 });
